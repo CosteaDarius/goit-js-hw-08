@@ -25,7 +25,7 @@ const populateForm = () => {
 
 form.addEventListener('input', saveFormState);
 
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', event => {
   event.preventDefault();
 
   const formData = {
@@ -40,4 +40,3 @@ form.addEventListener('submit', (event) => {
 });
 
 populateForm();
-
