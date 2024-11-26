@@ -2,10 +2,10 @@
 import { galleryItems } from './gallery-items';
 // Change code below this line
 
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
-const galleryContainer = document.querySelector("ul.gallery");
+const galleryContainer = document.querySelector('ul.gallery');
 const photosMarkup = createGalleryItem(galleryItems);
 
 function createGalleryItem(element) {
@@ -17,16 +17,16 @@ function createGalleryItem(element) {
         </a>
       `;
     })
-    .join("");
+    .join('');
 }
 
-galleryContainer.insertAdjacentHTML("beforeend", photosMarkup);
+galleryContainer.insertAdjacentHTML('beforeend', photosMarkup);
 
-const galleryHandler = new SimpleLightbox(".gallery a", {
-  captionsData: "alt",
+const galleryHandler = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
   captionDelay: 250,
 });
 
-galleryHandler.on("show.simplelightbox");
+galleryHandler.on('show.simplelightbox');
 
 console.log(galleryItems);
